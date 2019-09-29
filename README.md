@@ -25,7 +25,7 @@ p2 <- plot_ly(df, x = df$`Average Position`, y = df$Time, type = 'scatter', mode
 p
 ```
 
-![graph1](.images/graph1.png)
+![graph1](./images/graph1.png)
 
 ![](Module-5_files/figure-markdown_github/unnamed-chunk-2-1.png)
 
@@ -33,6 +33,6 @@ p
 p2
 ```
 
-![graph2](.images/graph2.png)
+![graph2](./images/graph2.png)
 
 ![](Module-5_files/figure-markdown_github/unnamed-chunk-2-2.png)
