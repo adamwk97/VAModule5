@@ -22,15 +22,17 @@ p <- plot_ly(data = df, x = df$Time, y = df$`Average Position`, type = 'scatter'
 
 p2 <- plot_ly(df, x = df$`Average Position`, y = df$Time, type = 'scatter', mode = 'lines')
 
-
-#p3 = plot_ly(df, x = df$`Average Position`, y = df$Time, type = ')
 p
 ```
+
+![graph1](.images/graph1.png)
 
 ![](Module-5_files/figure-markdown_github/unnamed-chunk-2-1.png)
 
 ``` r
 p2
 ```
+
+![graph2](.images/graph2.png)
 
 ![](Module-5_files/figure-markdown_github/unnamed-chunk-2-2.png)
