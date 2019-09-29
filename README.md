@@ -16,22 +16,6 @@ a <- list(
 library(plotly)
 ```
 
-    ## Loading required package: ggplot2
-
-    ## 
-    ## Attaching package: 'plotly'
-
-    ## The following object is masked from 'package:ggplot2':
-    ## 
-    ##     last_plot
-
-    ## The following object is masked from 'package:stats':
-    ## 
-    ##     filter
-
-    ## The following object is masked from 'package:graphics':
-    ## 
-    ##     layout
 
 ``` r
 p <- plot_ly(data = df, x = df$Time, y = df$`Average Position`, type = 'scatter', mode = 'lines')
