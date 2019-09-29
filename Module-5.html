@@ -1,0 +1,31 @@
+<h1 id="module-5---part-to-whole-and-ranking-analysis">Module 5 - Part to Whole and Ranking Analysis</h1>
+<p>For this project, I could not get the website 'Plot.ly' to work. I had spent hours tryinng to figure it out but it would not load for me and I could not create any graphs. I have alternatively used the plot.ly package in R to create graphs.</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(readxl)
+df &lt;-<span class="st"> </span><span class="kw">read_excel</span>(<span class="st">&quot;C:/Users/adamw/Downloads/Module # 5.xlsx&quot;</span>)</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r">a &lt;-<span class="st"> </span><span class="kw">list</span>(
+  <span class="dt">title =</span> <span class="st">&quot;AXIS TITLE&quot;</span>,
+  <span class="dt">showticklabels =</span> <span class="ot">TRUE</span>,
+  <span class="dt">tickangle =</span> <span class="dv">45</span>,
+  <span class="dt">exponentformat =</span> <span class="st">&quot;E&quot;</span>)
+  
+<span class="kw">library</span>(plotly)</code></pre>
+<p>The first graph shown is a simple dot plot showing the Time by the Average Position.</p>
+<pre class="sourceCode r"><code class="sourceCode r">p &lt;-<span class="st"> </span><span class="kw">plot_ly</span>(<span class="dt">data =</span> df, <span class="dt">x =</span> df$Time, <span class="dt">y =</span> df$<span class="st">`</span><span class="dt">Average Position</span><span class="st">`</span>, <span class="dt">type =</span> <span class="st">&#39;scatter&#39;</span>)
+
+p2 &lt;-<span class="st"> </span><span class="kw">plot_ly</span>(df, <span class="dt">x =</span> df$<span class="st">`</span><span class="dt">Average Position</span><span class="st">`</span>, <span class="dt">y =</span> df$Time, <span class="dt">type =</span> <span class="st">&#39;scatter&#39;</span>, <span class="dt">mode =</span> <span class="st">&#39;lines&#39;</span>)
+
+p</code></pre>
+<div class="figure">
+<img src="./images/graph1.png" alt="graph1" /><p class="caption">graph1</p>
+</div>
+<div class="figure">
+<img src="Module-5_files/figure-markdown_github/unnamed-chunk-2-1.png" />
+</div>
+<pre class="sourceCode r"><code class="sourceCode r">p2</code></pre>
+<p>The second graph is a line plot showing the Average Position by Time.</p>
+<div class="figure">
+<img src="./images/graph2.png" alt="graph2" /><p class="caption">graph2</p>
+</div>
+<div class="figure">
+<img src="Module-5_files/figure-markdown_github/unnamed-chunk-2-2.png" />
+</div>
