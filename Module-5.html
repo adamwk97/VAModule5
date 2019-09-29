@@ -1,0 +1,40 @@
+<h1 id="module-5---part-to-whole-and-ranking-analysis">Module 5 - Part to Whole and Ranking Analysis</h1>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(readxl)
+df &lt;-<span class="st"> </span><span class="kw">read_excel</span>(<span class="st">&quot;C:/Users/adamw/Downloads/Module # 5.xlsx&quot;</span>)</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r">a &lt;-<span class="st"> </span><span class="kw">list</span>(
+  <span class="dt">title =</span> <span class="st">&quot;AXIS TITLE&quot;</span>,
+  <span class="dt">showticklabels =</span> <span class="ot">TRUE</span>,
+  <span class="dt">tickangle =</span> <span class="dv">45</span>,
+  <span class="dt">exponentformat =</span> <span class="st">&quot;E&quot;</span>)
+  
+<span class="kw">library</span>(plotly)</code></pre>
+<pre><code>## Loading required package: ggplot2
+
+## 
+## Attaching package: &#39;plotly&#39;
+
+## The following object is masked from &#39;package:ggplot2&#39;:
+## 
+##     last_plot
+
+## The following object is masked from &#39;package:stats&#39;:
+## 
+##     filter
+
+## The following object is masked from &#39;package:graphics&#39;:
+## 
+##     layout</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r">p &lt;-<span class="st"> </span><span class="kw">plot_ly</span>(<span class="dt">data =</span> df, <span class="dt">x =</span> df$Time, <span class="dt">y =</span> df$<span class="st">`</span><span class="dt">Average Position</span><span class="st">`</span>, <span class="dt">type =</span> <span class="st">&#39;scatter&#39;</span>, <span class="dt">mode =</span> <span class="st">&#39;lines&#39;</span>)
+
+p2 &lt;-<span class="st"> </span><span class="kw">plot_ly</span>(df, <span class="dt">x =</span> df$<span class="st">`</span><span class="dt">Average Position</span><span class="st">`</span>, <span class="dt">y =</span> df$Time, <span class="dt">type =</span> <span class="st">&#39;scatter&#39;</span>, <span class="dt">mode =</span> <span class="st">&#39;lines&#39;</span>)
+
+
+<span class="co">#p3 = plot_ly(df, x = df$`Average Position`, y = df$Time, type = &#39;)</span>
+p</code></pre>
+<div class="figure">
+<img src="Module-5_files/figure-markdown_github/unnamed-chunk-2-1.png" />
+</div>
+<pre class="sourceCode r"><code class="sourceCode r">p2</code></pre>
+<div class="figure">
+<img src="Module-5_files/figure-markdown_github/unnamed-chunk-2-2.png" />
+</div>
